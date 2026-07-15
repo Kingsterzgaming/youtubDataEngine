@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-red: #ff0055;
+  --color-brand-red-hover: #e6004c;
+  --color-brand-purple: #7000ff;
+  --color-brand-cyan: #00f0ff;
+  --color-dark-surface: #0f0f16;
+  --color-dark-bg: #050508;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #06060a;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.08) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(112, 0, 255, 0.08) 0px, transparent 40%),
+    radial-gradient(at 50% 50%, rgba(0, 240, 255, 0.02) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #f4f4f5;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism card utilities */
+.glass-card {
+  background: rgba(15, 15, 22, 0.65);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 0, 85, 0.25);
+  box-shadow: 0 12px 30px -10px rgba(255, 0, 85, 0.15);
+  background: rgba(15, 15, 22, 0.85);
+}
+
+.neon-glow-red {
+  box-shadow: 0 0 20px -3px rgba(255, 0, 85, 0.4);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 20px -3px rgba(112, 0, 255, 0.4);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #06060a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 85, 0.4);
+}
+
+/* Keyframes and Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s infinite ease-in-out;
+}
+
+

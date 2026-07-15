@@ -1,0 +1,6 @@
+{
+  "name": "YouTube Data Engine",
+  "description": "A powerful full-stack dashboard to load, analyze, and export YouTube channel profiles, video metrics, playlists, comment sentiment, and AI insights using real-time API integrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
